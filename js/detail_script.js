@@ -32,6 +32,7 @@ function loadContent() {
   const contentDiv = document.getElementById("experties-content");
   const headerDiv = document.getElementById("experties-header");
   const imageDiv = document.getElementById("experties-image");
+  const imageLinkDiv = document.getElementById("experties-image-link");
 
   if (contentDiv) {
     contentDiv.innerText = content;
@@ -43,6 +44,10 @@ function loadContent() {
 
   if (imageDiv) {
     imageDiv.src = image;
+  }
+
+  if (imageLinkDiv) {
+    imageLinkDiv.href = image;
   }
 }
 

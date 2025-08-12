@@ -37,6 +37,12 @@
 
     <!-- jquery cdn link  -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <!-- Lightbox2 CSS -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet" />
+
+    <!-- Lightbox2 JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
   </head>
   <body>
     <!-- navbar starts -->
@@ -101,13 +107,15 @@
           <h2>
             <span id="experties-header" class="c-orange"></span>
           </h2>
-          <p id="experties-content" class="text-paragraph"></p>
+          <p id="experties-content" class="text-paragraph font-small"></p>
           <button onclick="window.location.href='../index.html#service'" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
             Go Back
           </button>
         </div>
         <div class="col-10 col-md-4 d-none d-md-block">
-          <img id="experties-image" class="img-fluid float" alt=""/>
+          <a id ="experties-image-link" href="#" data-lightbox="experties" data-title="">
+            <img id="experties-image" class="img-fluid float" alt="Experties Image" />
+          </a>
         </div>
       </div>
     </section>
