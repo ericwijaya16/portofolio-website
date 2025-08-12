@@ -41,7 +41,7 @@ body {
 /* styling menu icon */
 .nav-menu {
     border: none;
-    background-color: nav;
+    background-color: var(--nav-bg);
     font-size: 1.5rem;
     color: var(--btn-hover);
 }
