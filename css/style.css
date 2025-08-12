@@ -41,7 +41,7 @@ body {
 /* styling menu icon */
 .nav-menu {
     border: none;
-    background-color: #fff;
+    background-color: nav;
     font-size: 1.5rem;
     color: var(--btn-hover);
 }
@@ -604,8 +604,10 @@ footer .link-group a:hover {
   object-fit: contain;
 }
 
-.pad-left {
-    padding-left: 2rem;
+@media (min-width: 768px) {
+    .pad-left {
+        padding-left: 2rem;
+    }
 }
 
 .card-img-top {
