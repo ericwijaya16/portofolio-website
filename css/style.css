@@ -235,6 +235,12 @@ body {
     color: var(--h-1-color);
 }
 
+#experties-header {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
 /* skill section starts */
 .skill {
     background-color: var(--bg-1-color);
