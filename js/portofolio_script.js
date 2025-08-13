@@ -135,9 +135,8 @@ function loadContent() {
   image.forEach((src, index) => {
     const div = document.createElement("div");
     div.classList.add("carousel-item");
-    if (index === 0) div.classList.add("active"); // First item active
+    if (index === 0) div.classList.add("active");
 
-    // Detect file type
     const ext = src.split(".").pop().toLowerCase();
 
     if (ext === "mp4") {
@@ -166,5 +165,4 @@ function loadContent() {
   }
 }
 
-// Load on page ready
 document.addEventListener('DOMContentLoaded', loadContent);

@@ -138,7 +138,6 @@ async function fetchLatestArticles() {
   }
 }
 
-// Load on page ready
 document.addEventListener('DOMContentLoaded', fetchLatestArticles);
 
 // Sending Request to Backend for Sending Email

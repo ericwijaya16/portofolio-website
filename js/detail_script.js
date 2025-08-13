@@ -51,5 +51,4 @@ function loadContent() {
   }
 }
 
-// Load on page ready
 document.addEventListener('DOMContentLoaded', loadContent);
