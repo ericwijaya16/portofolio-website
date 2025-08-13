@@ -166,7 +166,7 @@ document.addEventListener('DOMContentLoaded', fetchLatestArticles);
   }
 
   function isValidEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+    return /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/.test(email);
   }
 
   function isValidPhone(phone) {
