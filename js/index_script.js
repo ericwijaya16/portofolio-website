@@ -222,6 +222,8 @@ document.addEventListener('DOMContentLoaded', fetchLatestArticles);
       if (data.success) {
         submitBtn.textContent = "Sent!";
         grecaptcha.reset();
+        alert("Email successfully sent!");
+        location.reload();
       } else {
         submitBtn.textContent = "Submit";
         submitBtn.disabled = false;
