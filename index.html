@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Portfolio - Eric Wijaya</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous" />
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.4/font/bootstrap-icons.css" />
+
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+</head>
+
+<body>
+  <nav id="navbar-top" class="navbar navbar-expand-lg navbar-light sticky-top">
+    <div class="container-fluid px-5">
+      <a class="navbar-brand fw-bold fs-2" href="#">Portfolio</a>
+      <button class="nav-menu d-md-none" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <i class="bi bi-menu-button-fill"></i>
+      </button>
+      <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
+        <ul class="navbar-nav gap-4" style="font-size: 1.1rem">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#expertise">Expertise</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">Skills</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">Portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#blog">Blog</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="d-flex align-items-center ms-auto">
+        <div class="form-check form-switch m-0 me-2">
+          <input class="form-check-input" type="checkbox" role="switch" id="darkModeToggle">
+          <label class="form-check-label" for="darkModeToggle">Dark Mode</label>
+        </div>
+      </div>
+      <button class="c-btn ms-4 py-2 px-4 rounded-pill d-none d-md-block"
+        onclick="window.location.href='#contact'">Contact</button>
+    </div>
+  </nav>
+
+  <section class="home pt-5 pb-5" id="home">
+    <div class="row justify-content-evenly align-middle">
+      <div class="col-10 col-md-6 text-center text-md-start" data-aos="slide-right">
+        <h2 class="intro-header">
+          Hello! I Am <br /><span class="c-orange">Eric Wijaya</span>
+        </h2>
+        <p class="text-paragraph font-large">
+          I am a Computer Science graduate from BINUS University with a strong foundation in software engineering and a
+          GPA of 3.15. During my studies, I was actively involved in the HIMTI student organization, contributing as an
+          event organizer for initiatives such as COMPUTERUN and HIMTI Workshop. Professionally, I have two years of
+          experience as a Back-End Developer, specializing in end-of-day credit card processing using Java, SQL
+          (Oracle), XML, and Jasper Reports on Linux environments. My responsibilities included job scheduling, user
+          testing, production deployment, debugging, solving production issue and handling user queries. Additionally, I
+          completed a 6-month internship as an IT teacher at KodeKiddo, where I taught programming fundamentals and
+          logical thinking to students from kindergarten to high school, covering topics such as Python, HTML & CSS, and
+          Java.
+        </p>
+        <button onclick="window.location.href='#contact'" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+          Hire Me
+        </button>
+      </div>
+      <div class="col-10 col-md-4 d-none d-md-block">
+        <img src="images/profile_picture.png" class="img-fluid float" alt="" />
+      </div>
+    </div>
+  </section>
+
+  <section class="expertise mt-5" id="expertise">
+    <div class="heading text-center">
+      <small>My Expertise</small>
+      <h3>
+        Provide Wide Range of <br />
+        Digital Expertise
+      </h3>
+    </div>
+    <div class="row justify-content-evenly mt-5">
+      <div class="col-10 col-md-4" data-aos="fade-up">
+        <div class="service-card">
+          <div class="img">
+            <img src="images/service-icon1.png" class="w-25 img-fluid img" alt="" />
+          </div>
+          <div class="content mt-3">
+            <h4>Backend Engineer – Financial Systems</h4>
+            <p class="text-paragraph font-med">
+              As a Backend Developer at PT Finexus Jakarta, I was responsible for building and maintaining robust
+              backend systems using Java, SQL, and Linux.
+            </p>
+            <a href="html/detail_expertise.html?topic=backend" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-10" data-aos="fade-up">
+        <div class="service-card">
+          <div class="img">
+            <img src="images/service-icon2.png" class="w-25 img-fluid img" alt="" />
+          </div>
+          <div class="content mt-3">
+            <h4>Web Development</h4>
+            <p class="text-paragraph font-med">
+              I am a self-taught web developer with a solid foundation in HTML, CSS, and JavaScript.
+            </p>
+            <a href="html/detail_expertise.html?topic=webdev" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 col-10" data-aos="fade-up">
+        <div class="service-card">
+          <div class="img">
+            <img src="images/service-icon3.png" class="w-25 img-fluid img" alt="" />
+          </div>
+          <div class="content mt-3">
+            <h4>Debugging and Data Analysis</h4>
+            <p class="text-paragraph font-med">
+              I am experienced in analyzing system issues in production and UAT environments using tools like Glogg to
+              scan and trace logs efficiently
+            </p>
+            <a href="html/detail_expertise.html?topic=debug" class="link">Read More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="skill mt-5 py-5" id="about">
+    <div class="row justify-content-evenly">
+      <div class="col-10 col-md-5 skill-with-progress" data-aos="slide-right">
+        <div class="row justify-content-evenly">
+          <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress java-linux">
+                <span class="progress-value java-linux-progress">0%</span>
+              </div>
+              <br />
+              <span class="text-paragraph">Java & Linux Shell Script</span>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress sql">
+                <span class="progress-value sql-progress">0%</span>
+              </div>
+              <br />
+              <span class="text-paragraph">SQL Oracle</span>
+            </div>
+          </div>
+        </div>
+        <div class="row justify-content-evenly mt-4">
+          <div class="col-10 col-md-6">
+            <div class="progress-card ms-3 ms-md-0">
+              <div class="circular-progress api">
+                <span class="progress-value api-progress">0%</span>
+              </div>
+              <br />
+              <span class="text-paragraph">SOAP API</span>
+            </div>
+          </div>
+          <div class="col-10 col-md-6 mt-4 mt-md-0">
+            <div class="progress-card ms-3  ms-md-0">
+              <div class="circular-progress html-css-js">
+                <span class="progress-value html-css-js-progress">0%</span>
+              </div>
+              <br>
+              <span class="text-paragraph">HTML, CSS, JavaScript</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-10 col-md-5 skill-detail" data-aos="slide-left">
+        <div class="heading mt-5 mt-md-3">
+          <small>My Skills</small>
+          <h3>Hands-On Digital Experiences</h3>
+          <p class="text-paragraph">
+            The diagram on the left shows my personal estimation of how well I’ve mastered each programming language or
+            technology I’ve worked with.
+          </p>
+          <p class="text-paragraph">
+            It's based on my hands-on experience, comfort level, and how frequently I’ve used each one in real projects.
+            While some skills are stronger than others, I'm always open to learning and improving as I continue working
+            on new challenges.
+          </p>
+          <button class="c-btn h-btn-reg mt-3 py-3 px-5 rounded-pill">
+            <a href="CV_Eric_Wijaya_Concise.pdf" download="CV_Eric_Wijaya_Concise">Download CV Concise</a>
+          </button>
+          <button class="c-btn h-btn-reg mt-3 py-3 px-5 rounded-pill">
+            <a href="CV_Eric_Wijaya_Full.pdf" download="CV_Eric_Wijaya_Full">Download CV Full</a>
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="portfolio" id="portfolio">
+    <div class="heading text-center pt-5">
+      <small>Creative Work</small>
+      <h3>Check My Portfolio</h3>
+    </div>
+
+    <div id="myBtnContainer" class="text-center mt-4">
+      <button class="filter-item" data-filter="all">All</button>
+      <button class="filter-item" data-filter="game">Game</button>
+      <button class="filter-item" data-filter="animate">Animation</button>
+      <button class="filter-item" data-filter="website">Website</button>
+      <button class="filter-item" data-filter="program">Program</button>
+    </div>
+    <div class="portfolio-body">
+      <div class="row justify-content-evenly px-4">
+        <div class="post col-md-4 program all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/weatherAPI/weather-01.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Weather App</h4>
+              <span class="badge bg-secondary badge-pill">API</span>
+              <span class="badge bg-secondary badge-pill">Java</span>
+              <span class="badge bg-secondary badge-pill mb-2">Program</span><br />
+              <a href="html/detail_portofolio.html?topic=weather" class="link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/Pizza/pizza-01.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Pizza Ordering Website</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">Laravel</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="html/detail_portofolio.html?topic=pizza" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/Wonderful/wonder-01.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Wonderful Journey</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">Laravel</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="html/detail_portofolio.html?topic=wonder" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row justify-content-evenly mt-4 px-4">
+        <div class="post col-md-4 website all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/ecom/ecom-01.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Amazon E-Commerce Website</h4>
+              <span class="badge bg-secondary badge-pill">HTML&CSS</span>
+              <span class="badge bg-secondary badge-pill">JavaScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Website</span><br />
+              <a href="html/detail_portofolio.html?topic=ecom" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 game all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/tetris/tetris-02.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Tetris in Java Game</h4>
+              <span class="badge bg-secondary badge-pill">Java</span>
+              <span class="badge bg-secondary badge-pill">JPanel</span>
+              <span class="badge bg-secondary badge-pill mb-2">Game</span><br />
+              <a href="html/detail_portofolio.html?topic=tetris" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+        <div class="post col-md-4 animate all col-10 mt-3 mt-md-0" data-aos="fade-up">
+          <div class="card">
+            <img src="images/animate/animate-01.png" class="card-img-top" alt="..." />
+            <div class="card-body text-center">
+              <h4 class="card-title">Countdown Animation</h4>
+              <span class="badge bg-secondary badge-pill">Adobe Animate</span>
+              <span class="badge bg-secondary badge-pill">ActionScript</span>
+              <span class="badge bg-secondary badge-pill mb-2">Animation</span><br />
+              <a href="html/detail_portofolio.html?topic=animate" class="read-more-btn link">Read More</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog mt-5 pb-5" id="blog">
+    <div class="heading text-center pt-5">
+      <small>Latest News</small>
+      <h3>Tech & IT Headlines</h3>
+    </div>
+    <div class="row justify-content-evenly px-4 mt-4" id="latestNews" data-aos="fade-up">
+    </div>
+  </section>
+
+  <section class="contact py-5" id="contact">
+    <div class="heading text-center">
+      <small>Get in Touch</small>
+      <h3>Any Questions? Feel Free to Contact</h3>
+    </div>
+    <div class="row justify-content-evenly mt-5">
+      <div class="col-md-5 col-10 contact-details" data-aos="slide-right">
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-geo-alt-fill"></i>
+          </div>
+          <div class="col-11">
+            <p class="text-paragraph">Mediterania Gajah Mada Apartement</p>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-telephone-fill"></i>
+          </div>
+          <div class="col-11">
+            <p class="text-paragraph">+62 818-0888-3391</p>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-send-fill"></i>
+          </div>
+          <div class="col-11">
+            <p class="text-paragraph">ericwijayaa7@gmail.com</p>
+          </div>
+        </div>
+        <div class="row justify-content-evenly">
+          <div class="col-1">
+            <i class="bi bi-globe-americas"></i>
+          </div>
+          <div class="col-11">
+            <p class="text-paragraph">https://www.linkedin.com/in/eric-wijaya-a801231b8/</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-5 col-10 mt-3 mt-md-0" data-aos="slide-left">
+        <div class="contact-form">
+          <div class="mb-3">
+            <input type="text" class="form-control" id="name" placeholder="Name" required />
+          </div>
+          <div class="mb-3">
+            <input type="email" class="form-control" id="email" placeholder="E-mail" required />
+          </div>
+          <div class="mb-3">
+            <input type="tel" class="form-control" id="phone" placeholder="Mobile No." pattern="[0-9]+"
+              title="Phone number must contain only digits" required />
+          </div>
+          <div class="mb-3">
+            <textarea class="form-control" id="message" placeholder="Message" rows="5" required></textarea>
+          </div>
+        </div>
+        <div class="g-recaptcha mb-3" data-sitekey="6LddF6QrAAAAAGaNNrs5iZPHIxXtVItwPyLQA9TV"></div>
+
+        <button id="submitBtn" class="c-btn h-btn mt-3 py-3 px-5 rounded-pill">
+          Submit
+        </button>
+        <div id="errorMsg" style="color: red; margin-top: 10px;"></div>
+      </div>
+    </div>
+    </div>
+  </section>
+  <button type="button" class="btn btn-floating btn-lg rounded-pill" id="btn-back-to-top">
+    <i class="bi bi-arrow-up"></i>
+  </button>
+
+  <footer class="text-center text-muted py-4">
+    <h3 class="text-white pt-4" data-aos="fade-up">Portfolio</h3>
+    <div class="link-group mt-5" data-aos="fade-up">
+      <a href="#home">Home</a>
+      <div class="vr"></div>
+      <a href="#expertise">Expertise</a>
+      <div class="vr"></div>
+      <a href="#about">Skills</a>
+      <div class="vr"></div>
+      <a href="#portfolio">Portfolio</a>
+      <div class="vr"></div>
+      <a href="#blog">Blog</a>
+      <div class="vr"></div>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="social-links mt-5" data-aos="fade-up">
+      <button onclick="window.open('https://www.instagram.com/ericwijaya7/','_blank')" class="rounded-pill instagram">
+        <i class="bi bi-instagram"></i>
+      </button>
+      <button onclick="window.open('https://www.linkedin.com/in/eric-wijaya-a801231b8/','_blank')"
+        class="rounded-pill linkedin">
+        <i class="bi bi-linkedin"></i>
+      </button>
+      <button onclick="window.open('https://www.facebook.com/eric.wijaya.3557','_blank')" class="rounded-pill facebook">
+        <i class="bi bi-facebook"></i>
+      </button>
+    </div>
+    <hr class="text-muted my-4" />
+
+    <p>Copyright 2025 Portfolio | All Rights Reserved.</p>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4"
+    crossorigin="anonymous"></script>
+
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1000,
+      offset: 50,
+    });
+  </script>
+  <script src="js/script.js"></script>
+  <script src="js/index_script.js"></script>
+
+</body>
+
+</html>
