@@ -625,7 +625,7 @@ footer .link-group a:hover {
     right: 40px;
     display: none;
     font-size: 1.4rem;
-    background-color: var(--h-2-color);
+    background-color: var(--h-1-color);
     color: #fff;
     animation: pulse 3s infinite;
 }
