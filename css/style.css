@@ -2,15 +2,15 @@
 :root {
     --bg-1-color: #eeececfd;
     --bg-2-color: #ffffffff;
-    --text-color: #000000;
+    --text-color: #181818;
     --nav-bg: #ffffff;
-    --link-color: #3f396d;
-    --footer-color: #211e39;
-    --h-1-color: #3f396d;
-    --h-2-color: #6f34fe;
+    --link-color: #fe594d;
+    --footer-color: #ec3f32;
+    --h-1-color: #ec3f32;
+    --h-2-color: #ff6f65;
     --p-text-1-color: #5f5e5e;
-    --btn-color: #3f396d;
-    --btn-hover: #6f34fe;
+    --btn-color: #ec3f32;
+    --btn-hover: #ff6f65;
 }
 
 body.dark-mode {
@@ -540,7 +540,7 @@ body {
 
 .contact-details i {
     font-size: 1.5rem;
-    color: #fca61f;
+    color: var(--h-1-color);
 }
 
 .contact-details p {
@@ -563,11 +563,15 @@ footer {
     background-color: var(--footer-color);
 }
 
+footer h3, hr, .text-white{
+    color: var(--text-color) !important;
+}
+
 footer .link-group a {
     margin-left: 10px;
     margin-right: 10px;
     text-decoration: none;
-    color: #6c757d;
+    color: var(--text-color);
     font-size: 1.1rem;
     margin-top: 1rem;
 }
@@ -621,7 +625,7 @@ footer .link-group a:hover {
     right: 40px;
     display: none;
     font-size: 1.4rem;
-    background-color: #fca61f;
+    background-color: var(--h-2-color);
     color: #fff;
     animation: pulse 3s infinite;
 }
