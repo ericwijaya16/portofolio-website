@@ -17,9 +17,9 @@ body.dark-mode {
     --bg-1-color: #121212;
     --bg-2-color: #181818;
     --text-color: #f1f1f1;
-    --nav-bg: #1a1a1a;
+    --nav-bg: #1b1b1b;
     --link-color: #dcdcdc;
-    --footer-color: #181818;
+    --footer-color: #1b1b1b ;
     --h-1-color: #aa7b29;
     --h-2-color: #e4b15a;
     --p-text-1-color: #b3b3b3;
@@ -467,7 +467,7 @@ body {
 
 /* blog section starts */
 .blog {
-    background-color: var(--bg-2-color);
+    background-color: var(--bg-1-color);
 }
 
 .blog .blogpost .card {
@@ -535,7 +535,7 @@ body {
 
 /* contact section starts */
 .contact {
-    background-color: var(--bg-1-color);
+    background-color: var(--bg-2-color);
 }
 
 .contact-details i {
