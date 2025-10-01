@@ -22,6 +22,11 @@ const paragraphs = {
   animate:
     "I created three animated countdown videos using Adobe Animate for my college organization, HIMTI. The purpose was to build excitement three days before the HIMTI Workshop, which had a gaming theme." +
     "\n\nI designed the animations frame by frame using JavaScript and ActionScript, using Mario as the main inspiration. Each video was 30 seconds long to perfectly fit Instagram Stories at the time (back in 2020, before Instagram started splitting stories over 30 seconds). You can see one of the videos to the right of this paragraph.",
+  porest:
+    "This project is a RESTful API built with Spring Boot that manages purchase orders in a structured and secure way. It provides full CRUD functionality for core entities such as purchase order headers, order details, items, and users. The goal of the project is to simulate a real-world backend system that could support purchasing workflows in a business environment." +
+    "\n\nSecurity is a key part of the implementation. The API uses Spring Security with JWT (JSON Web Tokens) to handle authentication and role-based authorization. Passwords are safely stored using BCrypt hashing, ensuring that sensitive information is properly protected. Only authorized users can access specific endpoints, which makes the project a good foundation for production-grade applications." +
+    "\n\nThe application is backed by a MySQL database, and all credentials are configured through environment variables for safety and portability. Database initialization scripts are included to create the schema and insert sample data, making it easy to set up and test the system." +
+    "\n\nTo ensure reliability, the project also includes JUnit 5 tests for both service logic and API endpoints. This adds confidence that the API behaves as expected and makes future changes easier to maintain.",
   default: "Topic not found. Please go back and choose a valid section.",
 };
 
@@ -32,58 +37,27 @@ const header_list = {
   ecom: "E-Commerce Website",
   tetris: "Tetris in Java",
   animate: "Countdown Animation Video",
+  porest: "Purchase Order REST API",
   default: "Not Found",
 };
 
+function genMediaList(basePath, prefix, count, ext) {
+  const list = [];
+  for (let i = 1; i <= count; i++) {
+    const num = String(i).padStart(2, "0");
+    list.push(`${basePath}/${prefix}-${num}.${ext}`);
+  }
+  return list;
+}
+
 const image_list = {
-  weather: [
-    "../images/weatherAPI/weather-01.png",
-    "../images/weatherAPI/weather-02.png",
-    "../images/weatherAPI/weather-03.png",
-    "../images/weatherAPI/weather-04.png",
-  ],
-  pizza: [
-    "../images/Pizza/pizza-01.png",
-    "../images/Pizza/pizza-02.png",
-    "../images/Pizza/pizza-03.png",
-    "../images/Pizza/pizza-04.png",
-    "../images/Pizza/pizza-05.png",
-    "../images/Pizza/pizza-06.png",
-    "../images/Pizza/pizza-07.png",
-    "../images/Pizza/pizza-08.png",
-    "../images/Pizza/pizza-09.png",
-    "../images/Pizza/pizza-10.png",
-  ],
-  wonder: [
-    "../images/Wonderful/wonder-01.png",
-    "../images/Wonderful/wonder-02.png",
-    "../images/Wonderful/wonder-03.png",
-    "../images/Wonderful/wonder-04.png",
-    "../images/Wonderful/wonder-05.png",
-    "../images/Wonderful/wonder-06.png",
-    "../images/Wonderful/wonder-07.png",
-    "../images/Wonderful/wonder-08.png",
-    "../images/Wonderful/wonder-09.png",
-    "../images/Wonderful/wonder-10.png",
-  ],
-  ecom: [
-    "../images/ecom/ecom-01.png",
-    "../images/ecom/ecom-02.png",
-    "../images/ecom/ecom-03.png",
-    "../images/ecom/ecom-04.png",
-    "../images/ecom/ecom-05.png",
-  ],
-  tetris: [
-    "../images/tetris/tetris-01.png",
-    "../images/tetris/tetris-02.png",
-    "../images/tetris/tetris-03.png",
-    "../images/tetris/tetris-04.png",
-  ],
-  animate: [
-    "../images/animate/INSTAREMAKE2.mp4",
-    "../images/animate/INSTAREMAKE2_H2.mp4",
-    "../images/animate/INSTAREMAKE2_H1_1.mp4",
-  ],
+  weather: genMediaList("../images/weatherAPI", "weather", 4, "png"),
+  pizza: genMediaList("../images/Pizza", "pizza", 10, "png"),
+  wonder: genMediaList("../images/Wonderful", "wonder", 10, "png"),
+  ecom: genMediaList("../images/ecom", "ecom", 5, "png"),
+  tetris: genMediaList("../images/tetris", "tetris", 4, "png"),
+  animate: genMediaList("../images/animate", "INSTAREMAKE2", 3, "mp4"),
+  porest: genMediaList("../images/po-rest", "po-rest", 12, "png"),
   default: "",
 };
 
@@ -111,6 +85,10 @@ const repoData = {
   animate: {
     url: "",
     text: "",
+  },
+  porest: {
+    url: "https://github.com/ericwijaya16/purchase-order-rest-api",
+    text: "Click here for the Purchase Order Rest API Project Repository",
   },
 };
 

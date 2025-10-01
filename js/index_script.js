@@ -1,4 +1,4 @@
-// Java and Linux progress circular bar 
+// Java and Linux progress circular bar
 let htmlProgress = document.querySelector(".java-linux"),
   htmlValue = document.querySelector(".java-linux-progress");
 
@@ -19,7 +19,7 @@ let progresshtml = setInterval(() => {
   }
 }, htmlspeed);
 
-// SQL progress circular bar 
+// SQL progress circular bar
 let javascriptProgress = document.querySelector(".sql"),
   javascriptValue = document.querySelector(".sql-progress");
 
@@ -40,7 +40,7 @@ let progressjs = setInterval(() => {
   }
 }, jsspeed);
 
-// SOAP API progress circular bar 
+// SOAP API progress circular bar
 let phpProgress = document.querySelector(".api"),
   phpValue = document.querySelector(".api-progress");
 
@@ -61,7 +61,7 @@ let progressphp = setInterval(() => {
   }
 }, phpspeed);
 
-// HTML CSS JS progress circular bar 
+// HTML CSS JS progress circular bar
 let reactProgress = document.querySelector(".html-css-js"),
   reactValue = document.querySelector(".html-css-js-progress");
 
@@ -96,6 +96,7 @@ $(document).ready(function () {
         .filter("." + value)
         .show("1000");
     }
+    AOS.refreshHard();
   });
 });
 
@@ -104,15 +105,19 @@ async function fetchLatestArticles() {
   const feeds = [
     { name: "Ness Labs", url: "https://nesslabs.com/feed" },
     { name: "The Verge", url: "https://www.theverge.com/rss/index.xml" },
-    { name: "ZDNet", url: "https://www.zdnet.com/news/rss.xml" }
+    { name: "ZDNet", url: "https://www.zdnet.com/news/rss.xml" },
   ];
 
-  const container = document.getElementById('latestNews');
-  container.innerHTML = '';
+  const container = document.getElementById("latestNews");
+  container.innerHTML = "";
 
   for (const site of feeds) {
     try {
-      const res = await fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(site.url)}`);
+      const res = await fetch(
+        `https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(
+          site.url
+        )}`
+      );
       const data = await res.json();
       const item = data.items[0]; // latest article
 
@@ -121,14 +126,20 @@ async function fetchLatestArticles() {
       container.innerHTML += `
       <div class="blogpost col-md-4 col-10 mb-4">
         <div class="card h-100">
-          <img src="${item.thumbnail || 'https://placehold.co/400x200'}" class="card-img-top rounded-4" alt="${item.title}">
+          <img src="${
+            item.thumbnail || "https://placehold.co/400x200"
+          }" class="card-img-top rounded-4" alt="${item.title}">
           <div class="card-body px-4">
             <small>${site.name}</small><span class="ms-3">${date}</span>
             <h4 class="card-title mt-2">
               <a href="${item.link}" target="_blank">${item.title}</a>
             </h4>
-            <p class="text-paragraph">${item.description.replace(/<\/?[^>]+(>|$)/g, "").substring(0, 120)}…</p>
-            <a href="${item.link}" target="_blank" class="read-more-btn link">Read More</a>
+            <p class="text-paragraph">${item.description
+              .replace(/<\/?[^>]+(>|$)/g, "")
+              .substring(0, 120)}…</p>
+            <a href="${
+              item.link
+            }" target="_blank" class="read-more-btn link">Read More</a>
           </div>
         </div>
       </div>`;
@@ -138,7 +149,7 @@ async function fetchLatestArticles() {
   }
 }
 
-document.addEventListener('DOMContentLoaded', fetchLatestArticles);
+document.addEventListener("DOMContentLoaded", fetchLatestArticles);
 
 // Sending Request to Backend for Sending Email
 (function () {
@@ -162,7 +173,7 @@ document.addEventListener('DOMContentLoaded', fetchLatestArticles);
 
   function containsSpam(message) {
     const lowerMsg = message.toLowerCase();
-    return spamWords.some(word => lowerMsg.includes(word));
+    return spamWords.some((word) => lowerMsg.includes(word));
   }
 
   function isValidEmail(email) {
@@ -214,26 +225,26 @@ document.addEventListener('DOMContentLoaded', fetchLatestArticles);
     fetch("https://portofolio-worker.ericwijayaa7.workers.dev", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({ name, email, phone, message, captcha })
+      body: JSON.stringify({ name, email, phone, message, captcha }),
     })
-    .then(res => res.json())
-    .then(data => {
-      if (data.success) {
-        submitBtn.textContent = "Sent!";
-        grecaptcha.reset();
-        alert("Email successfully sent!");
-        location.reload();
-      } else {
+      .then((res) => res.json())
+      .then((data) => {
+        if (data.success) {
+          submitBtn.textContent = "Sent!";
+          grecaptcha.reset();
+          alert("Email successfully sent!");
+          location.reload();
+        } else {
+          submitBtn.textContent = "Submit";
+          submitBtn.disabled = false;
+          showError("Failed to send email. Please try again.");
+        }
+      })
+      .catch(() => {
         submitBtn.textContent = "Submit";
         submitBtn.disabled = false;
         showError("Failed to send email. Please try again.");
-      }
-    })
-    .catch(() => {
-      submitBtn.textContent = "Submit";
-      submitBtn.disabled = false;
-      showError("Failed to send email. Please try again.");
-    });
+      });
   }
 
   submitBtn.addEventListener("click", sendEmail);
