@@ -64,7 +64,7 @@ const image_list = {
   tetris: genMediaList("../images/tetris", "tetris", 4, "png"),
   animate: genMediaList("../images/animate", "INSTAREMAKE2", 3, "mp4"),
   porest: genMediaList("../images/po-rest", "po-rest", 12, "png"),
-  ems: genMediaList("../images/ems", "EMS-DEMO", 1, "mp4"),
+  ems: ["https://youtu.be/DhKARHHz5lc"],
   default: "",
 };
 
@@ -116,6 +116,16 @@ function loadContent() {
   const contentDiv = document.getElementById("portofolio-content");
   const carouselInner = document.getElementById("carouselInner");
   const repoLink = document.getElementById("repo-link");
+  const arrowLeft = document.getElementById("carouselArrowLeft");
+  const arrowRight = document.getElementById("carouselArrowRight");
+
+  if (topic === "ems") {
+    arrowLeft.style.display = "none";
+    arrowRight.style.display = "none";
+  } else {
+    arrowLeft.style.display = "block";
+    arrowRight.style.display = "block";
+  }
 
   if (contentDiv) {
     contentDiv.innerText = content;
@@ -128,34 +138,46 @@ function loadContent() {
   // Loop through images/videos and create carousel items
   image.forEach((src, index) => {
     const div = document.createElement("div");
-    div.className = "pad-right";
-    div.classList.add("carousel-item");
+    div.className = "pad-right carousel-item";
     if (index === 0) div.classList.add("active");
 
-    const ext = src.split(".").pop().toLowerCase();
-
-    if (ext === "mp4") {
-      const video = document.createElement("video");
-      video.src = src;
-      video.className = "d-block mx-auto";
-      video.controls = true;
-      video.loop = true;
-      video.muted = true;
-      video.autoplay = true;
-      div.appendChild(video);
+    if (src.includes("youtube.com") || src.includes("youtu.be")) {
+      const iframe = document.createElement("iframe");
+      iframe.src = src.includes("youtu.be")
+        ? `https://www.youtube.com/embed/${src.split("/").pop()}?autoplay=1&mute=1&loop=1&playlist=${src.split("/").pop()}`
+        : `${src}?autoplay=1&mute=1&loop=1&playlist=${src.split("v=")[1]}`;
+      iframe.width = "100%";
+      iframe.height = "400";
+      iframe.frameBorder = "0";
+      iframe.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      iframe.allowFullscreen = true;
+      div.appendChild(iframe);
     } else {
-      const link = document.createElement("a");
-      link.href = src;
-      link.setAttribute("data-lightbox", "portfolio");
-      link.setAttribute("data-title", `Slide ${index + 1}`);
+      const ext = src.split(".").pop().toLowerCase();
+      if (ext === "mp4") {
+        const video = document.createElement("video");
+        video.src = src;
+        video.className = "d-block mx-auto";
+        video.controls = true;
+        video.loop = true;
+        video.muted = true;
+        video.autoplay = true;
+        div.appendChild(video);
+      } else {
+        const link = document.createElement("a");
+        link.href = src;
+        link.setAttribute("data-lightbox", "portfolio");
+        link.setAttribute("data-title", `Slide ${index + 1}`);
 
-      const img = document.createElement("img");
-      img.src = src;
-      img.className = "d-block w-100 img-fluid";
-      img.alt = `Slide ${index + 1}`;
+        const img = document.createElement("img");
+        img.src = src;
+        img.className = "d-block w-100 img-fluid";
+        img.alt = `Slide ${index + 1}`;
 
-      link.appendChild(img);
-      div.appendChild(link);
+        link.appendChild(img);
+        div.appendChild(link);
+      }
     }
 
     carouselInner.appendChild(div);
