@@ -27,6 +27,11 @@ const paragraphs = {
     "\n\nSecurity is a key part of the implementation. The API uses Spring Security with JWT (JSON Web Tokens) to handle authentication and role-based authorization. Passwords are safely stored using BCrypt hashing, ensuring that sensitive information is properly protected. Only authorized users can access specific endpoints, which makes the project a good foundation for production-grade applications." +
     "\n\nThe application is backed by a MySQL database, and all credentials are configured through environment variables for safety and portability. Database initialization scripts are included to create the schema and insert sample data, making it easy to set up and test the system." +
     "\n\nTo ensure reliability, the project also includes JUnit 5 tests for both service logic and API endpoints. This adds confidence that the API behaves as expected and makes future changes easier to maintain.",
+  ems:
+    "This project is an Employee Management System (EMS) built with React on the frontend and Spring Boot on the backend. It’s a full-stack web app that handles everything from managing employees, leave policies, and leave approvals, to individual employee profiles. All APIs are well-documented and come with a Postman collection, making testing and integration easy." +
+    "\n\nThe frontend is built with a clean, well-structured layout using React Outlet and leverages the Context API for efficient state management across the app. Each page is designed for usability, including employee lists, detailed profiles, leave applications, and leave balance pages. The system supports dark mode, and every list page comes with a live search feature so users can quickly find what they need. Forms are robust, with email validation, type checking, and proper error handling to ensure smooth data entry." +
+    "\n\nAdditional user-friendly features include a reset password flow integrated with Mailtrap sandbox for safe email testing. The app also has interactive dashboards, modals, and dynamic components for managing leave policies and approvals. Navigation is intuitive, with role-based access control and protected routes, so users only see what they’re allowed to. Overall, the frontend balances functionality with a clean, modern design." +
+    "\n\nOn the backend, Spring Boot handles all core logic, from leave workflows and policy management to email notifications. MongoDB stores all employee and leave data, ensuring scalability and flexibility. Together, the frontend and backend make this EMS a complete solution for HR management, demonstrating full-stack development skills and practical, real-world application design.",
   default: "Topic not found. Please go back and choose a valid section.",
 };
 
@@ -38,6 +43,7 @@ const header_list = {
   tetris: "Tetris in Java",
   animate: "Countdown Animation Video",
   porest: "Purchase Order REST API",
+  ems: "Employee Management System",
   default: "Not Found",
 };
 
@@ -58,6 +64,7 @@ const image_list = {
   tetris: genMediaList("../images/tetris", "tetris", 4, "png"),
   animate: genMediaList("../images/animate", "INSTAREMAKE2", 3, "mp4"),
   porest: genMediaList("../images/po-rest", "po-rest", 12, "png"),
+  ems: genMediaList("../images/ems", "EMS-DEMO", 1, "mp4"),
   default: "",
 };
 
@@ -89,6 +96,10 @@ const repoData = {
   porest: {
     url: "https://github.com/ericwijaya16/purchase-order-rest-api",
     text: "Click here for the Purchase Order Rest API Project Repository",
+  },
+  ems: {
+    url: "https://github.com/ericwijaya16/ems-react-springboot",
+    text: "Click here for the Employee Management System Project Repository",
   },
 };
 
